@@ -1,0 +1,43 @@
+body {
+    font-family: 'Ubuntu', sans-serif;
+    line-height: 1.6;
+    color: #1B1D28;
+}
+.add-group{
+    background-color: #F1F3F6;
+    border-radius: 12px;
+    width: 275px;
+    height: 95px;
+}
+.circle-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+
+}
+.circle-btn.blue{
+    background-color: #58D8F4;
+}
+.circle-btn.green{
+    background-color: #59CD90;
+}
+.circle-btn.yellow{
+    background-color: #FFAC30;
+}
+.add-group-text{
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 500;
+    font-size: 21px;
+    white-space: pre;
+}
+.login-header{
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 500;
+    font-size: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
