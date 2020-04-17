@@ -20,14 +20,12 @@ public class CustomAuthenticationSuccessHandler implements AuthenticationSuccess
 
         Set<String> roles = AuthorityUtils.authorityListToSet(authentication.getAuthorities());
 
-        if (roles.contains("DISPATCHER")) {
-            httpServletResponse.sendRedirect("/dispatcher");
-        }else if (roles.contains("FOREMAN")) {
-            httpServletResponse.sendRedirect("/foreman");
-        }else if (roles.contains("TECH")) {
-            httpServletResponse.sendRedirect("/tech");
+        if (roles.contains("USER")) {
+            httpServletResponse.sendRedirect("/lobby");
+        }else if (roles.contains("ADMIN")) {
+            httpServletResponse.sendRedirect("/lobby");
         } else {
-            httpServletResponse.sendRedirect("/tech"); // we dont have just "/" mapping  so redirect will be to technologist panel
+            httpServletResponse.sendRedirect("/main");
         }
     }
 }

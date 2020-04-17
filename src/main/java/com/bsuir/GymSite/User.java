@@ -34,15 +34,10 @@ public class User implements UserDetails {
         return username;
     }
 
-    public boolean isTech(){
-        return roles.contains(Role.TECH);
+    public boolean isAdmin(){
+        return roles.contains(Role.ADMIN);
     }
-    public boolean isDispatcher(){
-        return roles.contains(Role.DISPATCHER);
-    }
-    public boolean isForeman(){
-        return roles.contains(Role.FOREMAN);
-    }
+
 
     @Override
     public boolean isAccountNonExpired() {

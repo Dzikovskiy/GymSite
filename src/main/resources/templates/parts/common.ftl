@@ -3,7 +3,8 @@
     <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Factory</title>
+        <title>Gym</title>
+        <link rel="icon" href="/static/img/icon.png">
         <link rel="stylesheet" href="/static/style.css">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
@@ -27,7 +28,7 @@
                 crossorigin="anonymous"></script>
 
     </head>
-    <body>
+    <body class="" style="background: #e8e8e8">
     <#include "navbar.ftl">
 
     <#nested>

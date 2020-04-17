@@ -40,4 +40,14 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: #1B1D28
+}
+.main-header{
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 700;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #1B1D28
 }
