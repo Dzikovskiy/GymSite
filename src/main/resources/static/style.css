@@ -51,3 +51,8 @@ body {
     align-items: center;
     color: #1B1D28
 }
+.login-header.white{
+    justify-content: left;
+    align-items: flex-start;
+    color: #f1f1f1
+}
