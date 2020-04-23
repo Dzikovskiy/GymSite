@@ -73,10 +73,11 @@
                             </form>
                         </div>
                     </div>
-                <#else>
-                    No subscriptions
+
                 </#list>
             </div>
+        <#else>
+            <div class="  mt-4">Нету доступных абонементов</div>
         </#if>
     </div>
 

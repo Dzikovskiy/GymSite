@@ -27,6 +27,10 @@ public class User implements UserDetails {
     @JoinColumn(name = "subs_id", nullable = true)
     private Subscription subscription;
 
+    @ManyToOne(optional = true, cascade = CascadeType.ALL)
+    @JoinColumn(name = "trainer_id", nullable = true)
+    private Trainer trainer;
+
     @Temporal(TemporalType.DATE)
     private Date subs_end_date;
 
@@ -110,6 +114,9 @@ public class User implements UserDetails {
     public boolean isHaveSubscription() {
         return subscription != null;
     }
+    public boolean isHaveTrainer() {
+        return trainer != null;
+    }
 
     public Date getSubs_end_date() {
         return subs_end_date;
@@ -117,6 +124,14 @@ public class User implements UserDetails {
 
     public void setSubs_end_date(Date birthday) {
         this.subs_end_date = birthday;
+    }
+
+    public Trainer getTrainer() {
+        return trainer;
+    }
+
+    public void setTrainer(Trainer trainer) {
+        this.trainer = trainer;
     }
 
 }

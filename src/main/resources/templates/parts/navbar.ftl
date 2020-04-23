@@ -11,6 +11,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <div class="navbar-nav mr-auto">
                 <a class="nav-item nav-link" href="/subscriptions">Абонементы</a>
+                <a class="nav-item nav-link" href="/trainers">Тренера</a>
                 <a class="nav-item nav-link" href="/contacts">Контакты</a>
                 <a class="nav-item nav-link" href="/lobby">Личный кабинет</a>
             </div>

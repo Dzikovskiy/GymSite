@@ -12,7 +12,7 @@
             <div class="col ml-5 pl-5">
                 <ul class="list-unstyled">
                     <li>
-                        <div class="login-header mb-3">Ваши активные абонементы:</div>
+                        <div class="login-header mb-3">Ваши активные подписки:</div>
                     </li>
                 </ul>
             </div>
@@ -27,25 +27,41 @@
                             <input type="text" class="" id="id" name="id" value="${sub.id}" readonly hidden>
                             <img src="/static/img/subs.jpg" class="card-img-top" alt="">
                             <div class="card-body">
-                                <form method="post" action="/getSubscription">
-                                    <h5 class="card-title font-weight-bold">Абонемент на ${sub.days} дней</h5>
-                                    <h1 class="display-1 text-center">${sub.price}р</h1>
-                                    <p class="card-text ">
-                                    <ul class="list-unstyled text-center mt-2">
-                                        <li>ПОСЕЩЕНИЕ БЕЗ ОГРАНИЧЕНИЙ 24/7</li>
-                                        <li>ФИЛЬТРОВАННАЯ ПИТЬЕВАЯ ВОДА</li>
-                                        <li>БЕСПЛАТНЫЙ ДУШ</li>
-                                    </ul>
-                                    </p>
-                                </form>
+                                <h5 class="card-title font-weight-bold">Абонемент на ${sub.days} дней</h5>
+                                <h1 class="display-1 text-center">${sub.price}р</h1>
+                                <p class="card-text ">
+                                <ul class="list-unstyled text-center mt-2">
+                                    <li>ПОСЕЩЕНИЕ БЕЗ ОГРАНИЧЕНИЙ 24/7</li>
+                                    <li>ФИЛЬТРОВАННАЯ ПИТЬЕВАЯ ВОДА</li>
+                                    <li>БЕСПЛАТНЫЙ ДУШ</li>
+                                </ul>
+                                </p>
                             </div>
                             <div class="card-footer text-muted">
-                               Дата конца вашего абонемента: ${user.getSubs_end_date()}
+                                Дата конца вашего абонемента: ${user.getSubs_end_date()}
                             </div>
                         </div>
                     <#else>
                         Оформите свой абонемент
                         <a href="/subscriptions" class="btn btn-success ml-3 mt-3">Оформить</a>
+                    </#if>
+                </div>
+                <div class="col ml-5 pl-5">
+                    <#if isHaveTrainer>
+                        <div class="card mt-3">
+                            <input type="text" class="" id="id" name="id" value="${trainer.id}" readonly hidden>
+                            <#if trainer.filename?has_content>
+                                <img src="/static/img/trainers/${trainer.filename}" class="card-img-top">
+                            </#if>
+                            <div class="card-body">
+                                <input type="text" id="id" name="id" value="${trainer.id}" readonly hidden>
+                                <h5 class="card-title">${trainer.name}</h5>
+                                <p class="card-text">${trainer.description}</p>
+                            </div>
+                        </div>
+                    <#else>
+                        Выберете Своего личного тренера
+                        <a href="/trainers" class="btn btn-success ml-3 mt-3">Выбрать</a>
                     </#if>
                 </div>
             </div>
