@@ -28,7 +28,7 @@
                 crossorigin="anonymous"></script>
 
     </head>
-    <body class="" style="background: #e8e8e8">
+    <body class="d-flex flex-column min-vh-100" style="background: #e8e8e8">
     <#include "navbar.ftl">
 
     <#nested>

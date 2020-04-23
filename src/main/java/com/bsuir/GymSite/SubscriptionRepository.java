@@ -11,6 +11,6 @@ public interface SubscriptionRepository  extends CrudRepository<Subscription, In
 
     List<Subscription> findByPrice(int price);
     List<Subscription> findByDays(int days);
-    Optional<Subscription> findById(Integer id);
+    Optional<Subscription> findById(Long id);
 
 }

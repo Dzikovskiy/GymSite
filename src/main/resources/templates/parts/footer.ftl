@@ -1,6 +1,8 @@
 <#macro footer>
     <!--Footer-->
-    <div class="container-fluid mt-5 pt-5 bg-dark text-white">
+    <div class="wrapper flex-grow-1"></div>
+
+    <div class="container-fluid mt-5 pt-5 bg-dark text-white ">
         <div class="row mt-3 ml-5 pl-5 pb-5 bg-dark">
             <div class="col ml-5 pl-5">
                 <div class="login-header white mb-3">Наши контакты:</div>
@@ -21,4 +23,5 @@
             </div>
         </div>
     </div>
+
 </#macro>

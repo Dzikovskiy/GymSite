@@ -2,6 +2,7 @@ package com.bsuir.GymSite.controller;
 
 
 import com.bsuir.GymSite.Role;
+import com.bsuir.GymSite.Subscription;
 import com.bsuir.GymSite.User;
 import com.bsuir.GymSite.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -37,6 +38,8 @@ public class RegistrationController {
         }
 
         user.setActive(true);
+
+        //user.setSubscription(new Subscription());
 
         Set<String> roles = Arrays.stream(Role.values())
                 .map(Role::name)

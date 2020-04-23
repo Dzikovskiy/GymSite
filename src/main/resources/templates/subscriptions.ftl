@@ -1,6 +1,7 @@
 <#import "parts/common.ftl" as c>
 <#include "parts/security.ftl">
 <#import "parts/footer.ftl" as f>
+
 <@c.page>
     <!--Reviews-->
     <div class="container my-5 pb-5">
@@ -48,26 +49,36 @@
 
         </#if>
 
-        <div class="card-columns ">
-            <#list subscriptions as sub>
-                <div class="card mt-3">
-                    <img src="/static/img/subs.jpg" class="card-img-top" alt="">
-                    <div class="card-body">
-                        <h5 class="card-title font-weight-bold">Абонемент на ${sub.days} дней</h5>
-                        <h1 class="display-1 text-center">${sub.price}р</h1>
-                        <p class="card-text ">
-                        <ul class="list-unstyled text-center mt-2">
-                            <li>ПОСЕЩЕНИЕ БЕЗ ОГРАНИЧЕНИЙ 24/7</li>
-                            <li>ФИЛЬТРОВАННАЯ ПИТЬЕВАЯ ВОДА</li>
-                            <li>БЕСПЛАТНЫЙ ДУШ</li>
-                        </ul>
-                        </p>
+        <#if subscriptions?has_content>
+            <div class="card-columns ">
+                <#list subscriptions as sub>
+                    <div class="card mt-3">
+                        <img src="/static/img/subs.jpg" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <form method="post" action="getSubscription">
+                                <input type="text" id="id" name="id" value="${sub.id}" readonly hidden>
+                                <h5 class="card-title font-weight-bold">Абонемент на ${sub.days} дней</h5>
+                                <h1 class="display-1 text-center">${sub.price}р</h1>
+                                <p class="card-text ">
+                                <ul class="list-unstyled text-center mt-2">
+                                    <li>ПОСЕЩЕНИЕ БЕЗ ОГРАНИЧЕНИЙ 24/7</li>
+                                    <li>ФИЛЬТРОВАННАЯ ПИТЬЕВАЯ ВОДА</li>
+                                    <li>БЕСПЛАТНЫЙ ДУШ</li>
+                                </ul>
+                                </p>
+                                <#if name?has_content>
+                                    <button type="submit" class="btn btn-primary">Оформить</button>
+                                </#if>
+                                <input type="hidden" name="_csrf" value="${_csrf.token}"/>
+                            </form>
+                        </div>
                     </div>
-                </div>
-            <#else>
-                No subscriptions
-            </#list>
-        </div>
+                <#else>
+                    No subscriptions
+                </#list>
+            </div>
+        </#if>
     </div>
+
     <@f.footer/>
 </@c.page>

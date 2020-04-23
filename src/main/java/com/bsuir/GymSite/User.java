@@ -5,6 +5,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 
 import javax.persistence.*;
 import java.util.Collection;
+import java.util.Date;
 import java.util.Set;
 
 @Entity
@@ -22,6 +23,13 @@ public class User implements UserDetails {
     @Enumerated(EnumType.STRING)
     private Set<Role> roles;
 
+    @ManyToOne(optional = true, cascade = CascadeType.ALL)
+    @JoinColumn(name = "subs_id", nullable = true)
+    private Subscription subscription;
+
+    @Temporal(TemporalType.DATE)
+    private Date subs_end_date;
+
     public Long getId() {
         return id;
     }
@@ -34,10 +42,13 @@ public class User implements UserDetails {
         return username;
     }
 
-    public boolean isAdmin(){
-        return roles.contains(Role.ADMIN);
+    public void setUsername(String userName) {
+        this.username = userName;
     }
 
+    public boolean isAdmin() {
+        return roles.contains(Role.ADMIN);
+    }
 
     @Override
     public boolean isAccountNonExpired() {
@@ -57,10 +68,6 @@ public class User implements UserDetails {
     @Override
     public boolean isEnabled() {
         return isActive();
-    }
-
-    public void setUsername(String userName) {
-        this.username = userName;
     }
 
     @Override
@@ -92,5 +99,24 @@ public class User implements UserDetails {
         this.roles = roles;
     }
 
+    public Subscription getSubscription() {
+        return subscription;
+    }
+
+    public void setSubscription(Subscription subscription) {
+        this.subscription = subscription;
+    }
+
+    public boolean isHaveSubscription() {
+        return subscription != null;
+    }
+
+    public Date getSubs_end_date() {
+        return subs_end_date;
+    }
+
+    public void setSubs_end_date(Date birthday) {
+        this.subs_end_date = birthday;
+    }
 
 }

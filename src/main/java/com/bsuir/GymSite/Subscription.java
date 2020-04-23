@@ -1,6 +1,7 @@
 package com.bsuir.GymSite;
 
 import javax.persistence.*;
+import java.util.Collection;
 
 @Entity
 @Table(name = "subs")
@@ -12,6 +13,18 @@ public class Subscription {
 
     private int price;
     private int days;
+
+    @OneToMany(mappedBy = "subscription", fetch = FetchType.EAGER,
+            cascade = CascadeType.ALL)
+    private Collection<User> users;
+
+    public Collection<User> getUsers() {
+        return users;
+    }
+
+    public void setUsers(Collection<User> users) {
+        this.users = users;
+    }
 
     public Long getId() {
         return id;
