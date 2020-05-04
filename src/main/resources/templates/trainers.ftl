@@ -7,7 +7,7 @@
     <div class="container my-5 pb-5">
         <div class="row mt-5">
             <div class="col mt-5 pt-3">
-                <div class="main-header mb-5 pb-3">Наши тренера:</div>
+                <div class="main-header mb-5 pb-3">Наши тренеры:</div>
             </div>
         </div>
 

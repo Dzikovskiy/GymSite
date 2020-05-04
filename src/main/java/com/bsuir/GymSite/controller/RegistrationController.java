@@ -1,10 +1,9 @@
 package com.bsuir.GymSite.controller;
 
 
-import com.bsuir.GymSite.Role;
-import com.bsuir.GymSite.Subscription;
-import com.bsuir.GymSite.User;
-import com.bsuir.GymSite.UserRepository;
+import com.bsuir.GymSite.entities.Role;
+import com.bsuir.GymSite.entities.User;
+import com.bsuir.GymSite.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

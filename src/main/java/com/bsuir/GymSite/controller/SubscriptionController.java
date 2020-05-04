@@ -1,6 +1,11 @@
 package com.bsuir.GymSite.controller;
 
-import com.bsuir.GymSite.*;
+import com.bsuir.GymSite.entities.Subscription;
+import com.bsuir.GymSite.entities.Trainer;
+import com.bsuir.GymSite.entities.User;
+import com.bsuir.GymSite.repository.SubscriptionRepository;
+import com.bsuir.GymSite.repository.TrainerRepository;
+import com.bsuir.GymSite.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;

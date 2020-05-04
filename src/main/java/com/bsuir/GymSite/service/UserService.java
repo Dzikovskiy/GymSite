@@ -1,6 +1,6 @@
 package com.bsuir.GymSite.service;
 
-import com.bsuir.GymSite.UserRepository;
+import com.bsuir.GymSite.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

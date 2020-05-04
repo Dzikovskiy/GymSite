@@ -1,5 +1,6 @@
-package com.bsuir.GymSite;
+package com.bsuir.GymSite.repository;
 
+import com.bsuir.GymSite.entities.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface UserRepository extends JpaRepository<User, Long> {

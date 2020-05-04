@@ -1,5 +1,6 @@
-package com.bsuir.GymSite;
+package com.bsuir.GymSite.repository;
 
+import com.bsuir.GymSite.entities.Subscription;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

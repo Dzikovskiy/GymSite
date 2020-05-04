@@ -1,4 +1,4 @@
-package com.bsuir.GymSite;
+package com.bsuir.GymSite.entities;
 
 import javax.persistence.*;
 import java.util.Collection;

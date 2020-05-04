@@ -1,4 +1,4 @@
-package com.bsuir.GymSite;
+package com.bsuir.GymSite.entities;
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
