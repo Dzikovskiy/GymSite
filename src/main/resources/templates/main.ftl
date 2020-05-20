@@ -21,7 +21,7 @@
                 <img src="/static/img/carousel_5.jpg" class="d-block w-100">
             </div>
             <div class="carousel-item">
-                <img src="/static/img/carousel_6.jpg" class="d-block w-100">
+                <img src="/static/img/carousel_7.jpg" class="d-block w-100">
             </div>
         </div>
         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
