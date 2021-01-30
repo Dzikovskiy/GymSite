@@ -11,7 +11,9 @@ import java.util.Optional;
 public interface TrainerRepository extends CrudRepository<Trainer, Integer> {
 
     List<Trainer> findByName(String name);
+
     List<Trainer> findByDescription(String description);
+
     Optional<Trainer> findById(Long id);
 
 }

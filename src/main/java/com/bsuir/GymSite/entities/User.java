@@ -114,6 +114,7 @@ public class User implements UserDetails {
     public boolean isHaveSubscription() {
         return subscription != null;
     }
+
     public boolean isHaveTrainer() {
         return trainer != null;
     }

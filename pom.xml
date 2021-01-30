@@ -18,7 +18,7 @@
 
     <properties>
         <java.version>1.8</java.version>
-<!--        <start-class>com.bsuir.GymSite.Application</start-class>-->
+        <!--        <start-class>com.bsuir.GymSite.Application</start-class>-->
     </properties>
 
     <dependencies>
@@ -85,9 +85,9 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-<!--                <configuration>-->
-<!--                    <mainClass>com.bsuir.GymSite.Application</mainClass>-->
-<!--                </configuration>-->
+                <!--                <configuration>-->
+                <!--                    <mainClass>com.bsuir.GymSite.Application</mainClass>-->
+                <!--                </configuration>-->
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>

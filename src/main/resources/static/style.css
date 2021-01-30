@@ -3,13 +3,15 @@ body {
     line-height: 1.6;
     color: #1B1D28;
 }
-.add-group{
+
+.add-group {
     background-color: #F1F3F6;
     border-radius: 12px;
     width: 275px;
     height: 95px;
 }
-.circle-btn{
+
+.circle-btn {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,22 +20,27 @@ body {
     border-radius: 50%;
 
 }
-.circle-btn.blue{
+
+.circle-btn.blue {
     background-color: #58D8F4;
 }
-.circle-btn.green{
+
+.circle-btn.green {
     background-color: #59CD90;
 }
-.circle-btn.yellow{
+
+.circle-btn.yellow {
     background-color: #FFAC30;
 }
-.add-group-text{
+
+.add-group-text {
     font-family: 'Ubuntu', sans-serif;
     font-weight: 500;
     font-size: 21px;
     white-space: pre;
 }
-.login-header{
+
+.login-header {
     font-family: 'Ubuntu', sans-serif;
     font-weight: 500;
     font-size: 28px;
@@ -43,7 +50,7 @@ body {
     color: #1B1D28
 }
 
-.main-header{
+.main-header {
     font-family: 'Ubuntu', sans-serif;
     font-weight: 700;
     font-size: 50px;
@@ -52,7 +59,8 @@ body {
     align-items: center;
     color: #1B1D28
 }
-.login-header.white{
+
+.login-header.white {
     justify-content: left;
     align-items: flex-start;
     color: #f1f1f1

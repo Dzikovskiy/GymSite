@@ -46,7 +46,7 @@ public class UserController {
                 .collect(Collectors.toSet());
         user.getRoles().clear();
         for (String key : form.keySet()) {
-            if (roles.contains(key)){
+            if (roles.contains(key)) {
                 user.getRoles().add(Role.valueOf(key));
 
             }

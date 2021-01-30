@@ -21,17 +21,19 @@ import java.util.stream.Collectors;
 public class RegistrationController {
     @Autowired
     private UserRepository userRepository;
+
     @GetMapping("/registration")
-    public String registration(Model model){
+    public String registration(Model model) {
         model.addAttribute("message", "");
         return ("/registration");
     }
+
     @PostMapping("/registration")
-    public String addUser(User user, Map<String,Object> model,@RequestParam Map<String, String> form){
+    public String addUser(User user, Map<String, Object> model, @RequestParam Map<String, String> form) {
 
         User userFormDb = userRepository.findByUsername(user.getUsername());
-        if(userFormDb!=null){
-            model.put("message","User exists!");
+        if (userFormDb != null) {
+            model.put("message", "User exists!");
             return "registration";
 
         }
@@ -44,7 +46,7 @@ public class RegistrationController {
                 .map(Role::name)
                 .collect(Collectors.toSet());
         for (String key : form.values()) {
-            if (roles.contains(key)){
+            if (roles.contains(key)) {
                 user.setRoles(Collections.singleton(Role.valueOf(key)));
             }
 

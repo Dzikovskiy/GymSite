@@ -63,20 +63,20 @@
 
         </#if>
 
-    <div class="card-columns ">
-        <div class="card mt-3">
-            <img src="/static/img/trainer_4.jpg" class="card-img-top">
-            <div class="card-body">
-                <form method="post" action="getTrainer">
-                    <input type="text" id="id" name="id" value="" readonly hidden>
-                    <h5 class="card-title">Дуэйн</h5>
-                    <p class="card-text mb-4">Имею большой опыт работы</p>
-                    <button type="submit" class="btn btn-primary">Оформить персональные тренировки</button>
-                    <input type="hidden" name="_csrf" value=""/>
-                </form>
+        <div class="card-columns ">
+            <div class="card mt-3">
+                <img src="/static/img/trainer_4.jpg" class="card-img-top">
+                <div class="card-body">
+                    <form method="post" action="getTrainer">
+                        <input type="text" id="id" name="id" value="" readonly hidden>
+                        <h5 class="card-title">Дуэйн</h5>
+                        <p class="card-text mb-4">Имею большой опыт работы</p>
+                        <button type="submit" class="btn btn-primary">Оформить персональные тренировки</button>
+                        <input type="hidden" name="_csrf" value=""/>
+                    </form>
+                </div>
             </div>
         </div>
-    </div>
         <#if trainers?has_content>
             <div class="card-columns ">
 
